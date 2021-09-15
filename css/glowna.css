@@ -1,0 +1,15 @@
+.container{
+    max-width: 1200px;
+    width:100%;
+    margin:0 auto;
+    border: 1px solid #ffffff;
+    height:700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box{
+    width:200px;
+    height:200px;
+    background-color: #ffffff;
+  }

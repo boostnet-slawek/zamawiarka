@@ -8,27 +8,45 @@
     <!-- jQuery -->
     <script src="js/jquery-latest.min.js"></script>
 
-    <!-- Demo stuff -->
+    <!-- Demo wyglądu -->
     <link rel="stylesheet" href="css/jq.css">
     <link href="css/prettify.css" rel="stylesheet">
     <script src="js/prettify.js"></script>
     <script src="js/docs.js"></script>
 
-    <!-- Tablesorter: required -->
+    <!-- Wymagane przez jqery do sortowania-->
     <link rel="stylesheet" href="css/theme.blue.css">
+    <link rel="stylesheet" href="css/theme.ice.min.css">
     <script src="js/jquery.tablesorter.js"></script>
 
-    <script id="js">$(function () {
+    <script id="js">
+        $(function () {
 
-            // call the tablesorter plugin
+            // wdzwanianie sie do skryptu
             $("table").tablesorter({
-                theme: 'blue',
+                theme: 'ice',
 
-                // sort on the first column and in ascending order PRIOR TO the sort on the selected column
-                sortForce: [[0, 0]]
+                sortReset: true,
+
+                sortRestart: true,
+
+                sortInitialOrder: 'desc',
+
+                headers: {
+
+                    3: { sortInitialOrder: 'asc' },
+                    4: { sortInitialOrder: 'asc' },
+                    5: { sortInitialOrder: 'asc' },
+                    6: { sortInitialOrder: 'asc' },
+                    7: { sortInitialOrder: 'asc' },
+                    8: { sortInitialOrder: 'asc' },
+                    9: { sortInitialOrder: 'asc' }
+                }
+
             });
 
-        });</script>
+        });
+    </script>
 </head>
 
 <body>
@@ -65,7 +83,7 @@
                         <td>nie</td>
                         <td>elektroniczna</td>
                         <td>FV</td>
-                        <td></td>
+                        <td>tak</td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -77,7 +95,7 @@
                         <td></td>
                         <td></td>
                         <td>FV</td>
-                        <td></td>
+                        <td>tak</td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -89,7 +107,7 @@
                         <td></td>
                         <td></td>
                         <td>FV</td>
-                        <td></td>
+                        <td>nie</td>
                     </tr>
                     <tr>
                         <td>4</td>
@@ -101,7 +119,7 @@
                         <td></td>
                         <td></td>
                         <td>FV</td>
-                        <td></td>
+                        <td>tak</td>
                     </tr>
 
                 </tbody>
