@@ -154,13 +154,13 @@ $result = mysqli_query($link, $insert);
         kto = $("#kto"),
         co = $("#co"),
         marza = $("#marza"),
-        ustalona = $("#ustalona"),
+        cena = $("#cena"),
         uwagi = $("#uwagi"),
         przyjechalo = $("#przyjechalo"),
-        zakup = $("#zakup"),
-        fv = $("#fv"),
+        fv_zakup_typ = $("#fv_zakup_typ"),
+        fv_par = $("#fv_par"),
         zakonczono = $("#zakonczono"),
-        allFields = $([]).add(kto).add(co).add(marza).add(ustalona).add(uwagi).add(przyjechalo).add(zakup).add(fv).add(zakonczono),
+        allFields = $([]).add(kto).add(co).add(marza).add(cena).add(uwagi).add(przyjechalo).add(fv_zakup_typ).add(fv_par).add(zakonczono),
         tips = $(".validateTips");
 
       function updateTips(t) {
@@ -314,11 +314,11 @@ $result = mysqli_query($link, $insert);
             "<td>" + formData.kto + "</td>" +
             "<td>" + formData.co + "</td>" +
             "<td>" + formData.marza + "</td>" +
-            "<td>" + formData.ustalona + "</td>" +
+            "<td>" + formData.cena + "</td>" +
             "<td>" + formData.uwagi + "</td>" +
             "<td>" + formData.przyjechalo + "</td>" +
-            "<td>" + formData.zakup + "</td>" +
-            "<td>" + formData.fv + "</td>" +
+            "<td>" + formData.fv_zakup_typ + "</td>" +
+            "<td>" + formData.fv_par + "</td>" +
             "<td>" + formData.zakonczono + "</td>" +
             "</tr>");
            }
@@ -420,16 +420,16 @@ $result = mysqli_query($link, $insert);
         <input type="text" name="co" id="co" value="Grzesiek" class="text ui-widget-content ui-corner-all">
         <label for="marza">Marza</label>
         <input type="marza" name="marza" id="marza" value="10" class="text ui-widget-content ui-corner-all">
-        <label for="ustalona">Cena ustalona(brutto)</label>
-        <input type="ustalona" name="ustalona" id="ustalona" value="100" class="text ui-widget-content ui-corner-all">
+        <label for="cena">Cena ustalona(brutto)</label>
+        <input type="cena" name="cena" id="cena" value="100" class="text ui-widget-content ui-corner-all">
         <label for="uwagi">Uwagi</label>
         <input type="uwagi" name="uwagi" id="uwagi" value="Uwagi do zamówienia" class="text ui-widget-content ui-corner-all">
         <label for="przyjechalo">Przyjechalo</label>
         <input type="przyjechalo" name="przyjechalo" id="przyjechalo" value="10" class="text ui-widget-content ui-corner-all">
-        <label for="zakup">Zakup</label>
-        <input type="zakup" name="zakup" id="zakup" value="mail/kuweta" class="text ui-widget-content ui-corner-all">
-        <label for="fv">fv</label>
-        <input type="fv" name="fv" id="fv" value="tak/nie" class="text ui-widget-content ui-corner-all">
+        <label for="fv_zakup_typ">Zakup</label>
+        <input type="fv_zakup_typ" name="fv_zakup_typ" id="fv_zakup_typ" value="mail/kuweta" class="text ui-widget-content ui-corner-all">
+        <label for="fv_par">fv</label>
+        <input type="fv_par" name="fv_par" id="fv_par" value="tak/nie" class="text ui-widget-content ui-corner-all">
         <label for="zakonczono">Zakonczono</label>
         <input type="zakonczono" name="zakonczono" id="zakonczono" value="tak/nie" class="text ui-widget-content ui-corner-all">
 
