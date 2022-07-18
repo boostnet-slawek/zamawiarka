@@ -1,0 +1,3 @@
+1b8f8f - wyjsciowy do przyciskow 
+czcionka arial 18 
+horizontal 50 / vertical 10
