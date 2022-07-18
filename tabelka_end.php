@@ -52,7 +52,7 @@
         <center>
             <h1>Zamawiarka BOOSTNET</h1><br>
         </center>
-        <a href="index.php"><img src="img/wstecz.png"></a>&nbsp;<a href="dodaj.php"><img src="img/dodaj.png" id="create-user"></a>&nbsp;<a href="tabelka.php"><img src="img/aktywne.png"></a>&nbsp;&nbsp;<a href="tabela_all.php"><img src="img/wszystkie.png"><a href="raporty.php"><img src="img/raporty.png"></a><br>
+        <a href="index.php"><img src="img/wstecz.png"></a>&nbsp;<a href="dodaj.php"><img src="img/dodaj.png" id="create-user"></a>&nbsp;<a href="tabelka.php"><img src="img/aktywne.png"></a>&nbsp;<a href="tabela_all.php"><img src="img/wszystkie.png">&nbsp;<a href="raporty.php"><img src="img/raporty.png"></a><br>
         <div id="demo">
             <table class="tablesorter">
                 <thead>
