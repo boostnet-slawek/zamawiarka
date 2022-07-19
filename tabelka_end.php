@@ -325,7 +325,7 @@ $result = mysqli_query($link, $insert);
     <center>
       <h1>Zamawiarka BOOSTNET</h1><br>
     </center>
-    <a href="index.php"><img src="img/wstecz.png"></a>&nbsp;<img src="img/dodaj.png" id="create-user">&nbsp;<a href="tabelka.php"><img src="img/aktywne.png"></a>&nbsp;<a href="tabelka.php"><img src="img/wszystkie.png"></a>&nbsp;<a href="raporty.php"><img src="img/raporty.png"></a><br>
+    <a href="index.php"><img src="img/wstecz.png"></a>&nbsp;<img src="img/dodaj.png" id="create-user">&nbsp;<a href="tabelka.php"><img src="img/aktywne.png"></a>&nbsp;<a href="tabelka_all.php"><img src="img/wszystkie.png"></a>&nbsp;<a href="raporty.php"><img src="img/raporty.png"></a><br>
     <div id="demo">
       <table class="tablesorter">
         <thead>
@@ -348,7 +348,7 @@ $result = mysqli_query($link, $insert);
           <?php
           
 
-          $zamowienia = mysqli_query($link, "SELECT id,kto,co,marza,cena,uwagi,przyjechalo,fv_zakup_typ,fv_par,zakonczono FROM zamowienia WHERE zakonczono='t' ");
+          $zamowienia = mysqli_query($link, "SELECT id,kto,co,marza,cena,uwagi,przyjechalo,fv_zakup_typ,fv_par,zakonczono FROM zamowienia WHERE zakonczono='t'");
 
           /* fetch object array */
           while ($zmienna = $zamowienia->fetch_row()) {
