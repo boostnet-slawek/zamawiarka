@@ -13,8 +13,6 @@ $insert = "INSERT IGNORE INTO zamowienia (kto, co, marza, cena, uwagi, przyjecha
 $result = mysqli_query($link, $insert);
 /////////////////////////////////////   
  
-
- 
   echo json_encode([
     'status' => $result ? 'OK' : 'ERROR',
     'msg' =>  $result ? 'Pomyślnie zapisano dane' :  mysqli_error($link),
@@ -23,9 +21,7 @@ $result = mysqli_query($link, $insert);
   ]);
   exit();
  
-}
-
-?>
+} ?>
 
 <html>
 <head>
@@ -319,11 +315,8 @@ $result = mysqli_query($link, $insert);
   <!-- konczy sie head dla popupa -->
 
 </head>
-
 <body>
-
   <div id="main">
-
     <center>
       <h1>Zamawiarka BOOSTNET</h1><br>
     </center>
@@ -349,10 +342,7 @@ $result = mysqli_query($link, $insert);
 
 
           <?php
-          
-
-          $zamowienia = mysqli_query($link, "SELECT id,kto,co,marza,cena,uwagi,przyjechalo,fv_zakup_typ,fv_par,zakonczono FROM zamowienia WHERE zakonczono='n' ");
-
+             $zamowienia = mysqli_query($link, "SELECT id,kto,co,marza,cena,uwagi,przyjechalo,fv_zakup_typ,fv_par,zakonczono FROM zamowienia WHERE zakonczono='n' ");
           /* fetch object array */
           while ($zmienna = $zamowienia->fetch_row()) {
             $id = $zmienna[0];
@@ -380,7 +370,7 @@ $result = mysqli_query($link, $insert);
                         <td>$fv_zakup_typ</td>
                         <td>$fv_par</td>
                         <td>$zakonczono</td>
-                        <td><img src='img/edit.png' id='create-user'></td>
+                        <td><img src='img/edit.png'> $id</td>
                     </tr>
                 ");
           };
