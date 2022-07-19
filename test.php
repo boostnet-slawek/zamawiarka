@@ -13,6 +13,8 @@ $insert = "INSERT IGNORE INTO zamowienia (kto, co, marza, cena, uwagi, przyjecha
 $result = mysqli_query($link, $insert);
 /////////////////////////////////////   
  
+
+ 
   echo json_encode([
     'status' => $result ? 'OK' : 'ERROR',
     'msg' =>  $result ? 'Pomyślnie zapisano dane' :  mysqli_error($link),
@@ -197,28 +199,7 @@ $result = mysqli_query($link, $insert);
         var valid = true;
         allFields.removeClass("ui-state-error");
 
-        // WJ - zakomentowałem bo chyba nie do końca te regóły sprawdzaja to co powinny
-
-        /* valid = valid && checkLength(kto, "kto", 3, 26);
-        valid = valid && checkLength(co, "co", 6, 80);
-        valid = valid && checkLength(marza, "marza", 1, 5);
-        valid = valid && checkLength(ustalona, "ustalona", 1, 5);
-        valid = valid && checkLength(uwagi, "uwagi", 0, 100);
-        valid = valid && checkLength(przyjechalo, "przyjechalo", 0, 20);
-        valid = valid && checkLength(zakup, "zakup", 0, 20);
-        valid = valid && checkLength(fv, "fv", 0, 20);
-        valid = valid && checkLength(zakonczono, "zakonczono", 0, 20);
-
-
-        valid = valid && checkRegexp(kto, /^[a-z]([0-9a-z_\s])+$/i, "To pole pozwala na użycie liter z zakresu a-z oraz cyfry 0-9 max 26 znakow ");
-        valid = valid && checkRegexp(co, /^[a-z]([0-9a-z_\s])+$/i, "To pole pozwala na użycie liter z zakresu a-z oraz cyfry 0-9 max 80 znkow");
-        valid = valid && checkRegexp(marza, /^([0-9a])+$/, "To pole pozwala wpisać tylko cyfry z zakresu 0-9");
-        valid = valid && checkRegexp(ustalona, /^([0-9a])+$/, "To pole pozwala wpisać tylko cyfry z zakresu 0-9");
-        valid = valid && checkRegexp(uwagi, /^([0-9a])+$/, "To pole pozwala wpisać tylko cyfry z zakresu 0-9 max 100 znakow");
-        valid = valid && checkRegexp(przyjechalo, /^([0-9a])+$/, "Tak/nie");
-        valid = valid && checkRegexp(zakup, /^([0-9a])+$/, "Forma wystawienia fv elektroniczna/papierowa");
-        valid = valid && checkRegexp(fv, /^([0-9a])+$/, "Tak/nie");
-        valid = valid && checkRegexp(zakonczono, /^([0-9a])+$/, "Tak/nie"); */
+      
         console.log('valid', valid);
         if (valid) {
           // WJ - tu dodałem
@@ -361,6 +342,7 @@ $result = mysqli_query($link, $insert);
             <th>FV zakupu typ</th>
             <th>FV czy Par</th>
             <th>Zakończono</th>
+            <th>Edytuj</th>
           </tr>
         </thead>
         <tbody>
@@ -398,6 +380,7 @@ $result = mysqli_query($link, $insert);
                         <td>$fv_zakup_typ</td>
                         <td>$fv_par</td>
                         <td>$zakonczono</td>
+                        <td><img src='img/edit.png' id='create-user'></td>
                     </tr>
                 ");
           };
@@ -432,6 +415,7 @@ $result = mysqli_query($link, $insert);
         <input type="fv_par" name="fv_par" id="fv_par" value="tak/nie" class="text ui-widget-content ui-corner-all">
         <label for="zakonczono">Zakonczono</label>
         <input type="zakonczono" name="zakonczono" id="zakonczono" value="tak/nie" class="text ui-widget-content ui-corner-all">
+       
 
 
         <!-- Allow form submission with keyboard without duplicating the dialog button -->
